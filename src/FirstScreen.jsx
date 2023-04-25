@@ -6,13 +6,13 @@ const FirstScreen = () => {
 
   async function login() {
     axios
-      .get("https://drdeepu.pythonanywhere.com/login", ...data)
+      .get("https://drdeepu.pythonanywhere.com/login", { data: { ...data } })
       .then((res) => {
         console.log(res);
       });
   }
   React.useEffect(() => {
-    login();
+    // login();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
